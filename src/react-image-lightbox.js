@@ -1317,6 +1317,8 @@ class ReactImageLightbox extends Component {
             imageStyle.width  = bestImageInfo.width;
             imageStyle.height = bestImageInfo.height;
 
+            console.log('svobodu papugayam!!!!')
+
             const imageSrc = bestImageInfo.src;
             if (discourageDownloads) {
                 imageStyle.backgroundImage = `url('${imageSrc}')`;
@@ -1679,6 +1681,9 @@ ReactImageLightbox.propTypes = {
 
     // Initial zoom level
     initialZoomLevel: PropTypes.number,
+
+    // Initial image info (width, height, positioning)
+    imageInfo: PropTypes.object,
 };
 
 ReactImageLightbox.defaultProps = {

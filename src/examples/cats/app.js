@@ -85,7 +85,14 @@ const App = React.createClass({
     getInitialState() {
         return {
             index: 0,
-            isOpen: false
+            isOpen: false,
+
+            imageInfo: {
+              width: 150,
+              height: 140,
+              posX: 10,
+              posY: 50,
+            }
         };
     },
     openLightbox() {
@@ -123,6 +130,7 @@ const App = React.createClass({
 
                     imageTitle={titles[this.state.index]}
                     imageCaption={captions[this.state.index]}
+                    imageInfo={this.state.imageInfo}
                 />
             );
         }
